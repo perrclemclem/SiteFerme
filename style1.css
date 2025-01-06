@@ -1,0 +1,221 @@
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: montserrat;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header{
+	display: block;
+	background-color: #ffffff;
+	font-family: montserrat;
+}
+
+nav {
+	height: 168px;
+    display: flex;
+    justify-content: center; /* centre le menu horizontalement */
+    align-items: center; /* centre le menu verticalement */
+    background-color: #66e26a;
+    font-family: 'Actor', sans-serif; /* police pour le menu*/
+    font-size: 34px; /* taille de la police */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; /*les arrondis du menu*/
+}
+
+section
+{
+	background-color: #ffffff
+}
+
+aside
+{
+	background-color: #4e5774
+}
+
+footer{
+	display: flex;
+	height: 204px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+ul
+{
+	display: inline-flex;
+	list-style: none;
+}
+
+li{
+	display: block;
+	list-style: none;
+	text-align: center;
+	unicode-bidi: isolate;
+}
+
+p{
+	display: inline-block;
+}
+
+
+/* <uniquifier>: Utilise un nom de classe unqiue et descriptif
+   <weight>: Utilise une valeur de 100 à 900 */
+
+.montserrat-<uniquifier> {	
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+.actor-regular {
+  font-family: "Actor", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#footer
+{ 
+	background-color: #b2f0ff;
+}
+
+#top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex; /* Utilise une flex-box pour aligner */
+    justify-content: space-between; /* Créé un espace entre les éléments*/
+    align-items: center; /* Centre les éléments verticalement */
+    height: 50px; /* Maintient la taille */
+    background-color: #b2f0ff;
+    font-size: 18px;
+    padding: 0 10px; /* Ajoute du padding horizontal*/
+}
+
+.top {
+    display: flex; /* Utilise flexbox pour les éléments fils*/
+    align-items: center; /* Centre les éléments verticalement */
+	padding-left: 5px;
+}
+
+#nav
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#section
+{
+}
+
+.petite-image {
+    display: inline-block;
+    width: 30px;
+    height: 35px;
+    margin-right: 5px; /* Ajoute des espace entre les images et le texte */
+}
+
+.logo
+{
+	border: solid 4px #6d9795;
+	width: 115px;
+	height: 118px;
+	border-radius: 20px;
+	margin-right: 45px;
+}
+
+.icone-panier
+{
+	width: 112px;
+	height: 112px;
+	border-radius: 20px;
+	margin-left: 80px;
+}
+
+.milieu-top{
+	vertical-align: text-top;
+}
+
+.menu {
+    display: flex; /* Utilise flexbox pour le menu */
+    justify-content: space-between; /* Fais des espaces égaux entre les éléments */
+    align-items: center; 
+    padding: 0; /* Enlève le padding par défaut*/
+    margin: 0; /* Enlève la marge par défaut */
+    list-style: none; /* Enlève les points de liste */
+}
+
+.menu > li {
+    position: relative; /* Position relative pour position absolue de ul */
+}
+
+.menu > li > a {
+    padding: 15px;
+}
+
+.menu > li > ul {
+    display: none; /* Cache les liens des sous-menus  */
+    position: absolute; /* Les met en position absolue */
+    background-color: #66e26a; /* Pour que la couleur des sous-menu va avec la couleur du nav */
+    padding: 10px; /* Ajoute du padding */
+    border-radius: 5px; /* Optionel: arrondis des côtés */
+}
+
+.menu > li:hover > ul {
+    display: block; /* Montre les soulignage des sous-menus quand la souris passe dessus */
+}
+
+.menu li {
+    margin: 0 20px; /* Ajuste la distance entre les éléments du menu*/
+    text-align: center; /* Centre le texte dans chaque élément du menu */
+}
+
+.menu a {
+	display: block; /* Fais du lien un élément block pour plus d'espace pour clicker */
+    padding: 10px; /* Ajoute du padding pour augmenter l'espace clickable */
+    color: #000; /* Couleur du lien */
+    text-decoration: none; /* Enlève le souslignage */
+    font-family: 'Actor', sans-serif;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+ul ul li {
+    font-size: 16px; /* Donne une taille de texte plus petite pour les éléments des sous-menus */
+    color: #000; /* Couleur du texte */
+    display: block;
+}
+
+.image-offre
+{
+	display: inline-block;
+	width: 195px;
+	height: 195px;
+    border: solid #2f8a28 10px;
+	border-radius: 125px;
+}
+
+.offre-recrutement
+{
+    display: flex;
+    background-color: #b2f0ff87;
+    border: solid black 1px;
+    border-radius: 25px;
+    align-self: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: inset;
+
+}
