@@ -83,6 +83,12 @@ p{
   font-style: normal;
 }
 
+.agbalumo-regular {
+    font-family: "Agbalumo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 #footer
 { 
 	background-color: #b2f0ff;
