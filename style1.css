@@ -12,6 +12,8 @@ body{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+
+    /*Fais l'image répétée en arrière-plan*/
     background-image: url("Images/taches-vaches.png");
     background-clip: border-box;
     background-repeat: repeat;
@@ -223,7 +225,7 @@ ul ul li {
     background-color: #b2f0ff87;
     border: solid black 1px;
     border-radius: 25px;
-    align-self: center;
+    align-self: center; /*centre les offres de recrutement au milieu de la page*/
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
