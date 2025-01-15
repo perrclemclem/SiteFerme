@@ -27,15 +27,9 @@ header{
 }
 
 nav {
-	height: 168px;
     display: flex;
-    justify-content: center; /* centre le menu horizontalement */
     align-items: center; /* centre le menu verticalement */
-    background-color: #66e26a;
-    font-family: 'Actor', sans-serif; /* police pour le menu*/
     font-size: 34px; /* taille de la police */
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px; /*les arrondis du menu*/
 }
 
 h1 {
