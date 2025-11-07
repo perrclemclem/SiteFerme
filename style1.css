@@ -1,10 +1,12 @@
 
+/*éléments de style qui s'appliquent dans tous le site*/
 *{
 	box-sizing: border-box;
 }
 
 body{
-	font-family: montserrat;
+    color: black;
+	font-family: "Montserrat", sans-serif;
 	margin-left: auto;
 	margin-right: auto;
 	margin: 0;
@@ -12,39 +14,17 @@ body{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-
-    /*Fais l'image répétée en arrière-plan*/
-    background-image: url("Images/taches-vaches.png");
-    background-clip: border-box;
-    background-repeat: repeat;
-    background-size: 100%;
 }
 
 header{
 	display: block;
-	background-color: #ffffff;
-	font-family: montserrat;
+	font-family: "Montserrat", sans-serif;
 }
 
 nav {
     display: flex;
     align-items: center; /* centre le menu verticalement */
     font-size: 34px; /* taille de la police */
-}
-
-h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-family: agbalumo-regular;
-}
-
-footer{
-	display: flex;
-	height: 204px;
-	justify-content: space-evenly;
-	align-items: center;
 }
 
 ul
@@ -62,14 +42,30 @@ li{
 
 p{
 	display: inline-block;
-    font-size: 24px;
+}
+
+.petite-image {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 5px; /* Ajoute des espace entre les images et le texte */
+}
+
+.titre-page {
+    display: flex;
+    font-family: "Agbalumo", system-ui;
+    font-size: 36px;
+    margin: 30px 30px 50px;
+    align-self: center;
 }
 
 
-/* <uniquifier>: Utilise un nom de classe unqiue et descriptif
+/* Polices utilisées dans notre site dans le css
+
+<uniquifier>: Utilise un nom de classe unqiue et descriptif
    <weight>: Utilise une valeur de 100 à 900 */
 
-.montserrat-<uniquifier> {	
+."Montserrat", sans-serif-<uniquifier> {	
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: <weight>;
@@ -83,66 +79,31 @@ p{
 }
 
 .agbalumo-regular {
-    font-family: "Agbalumo", serif;
+    font-family: "Agbalumo", system-ui;
     font-weight: 400;
     font-style: normal;
 }
 
-#footer
-{ 
-	background-color: #b2f0ff;
-}
+
+/*éléments de style utilisés pour les contacts*/
 
 #top {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: flex; /* Utilise une flex-box pour aligner */
-    justify-content: space-between; /* Créé un espace entre les éléments*/
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center; /* Centre les éléments verticalement */
-    height: 50px; /* Maintient la taille */
+    height: 50px;
     background-color: #b2f0ff;
     font-size: 18px;
-    padding: 0 10px; /* Ajoute du padding horizontal*/
+    padding: 0 10px;
 }
 
 .top {
     display: flex; /* Utilise flexbox pour les éléments fils*/
-    align-items: center; /* Centre les éléments verticalement */
+    align-items: center;
 	padding-left: 5px;
-}
-
-#nav
-{
-	height: 168px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* centre le menu horizontalement */
-    align-items: center; /* centre le menu verticalement */
-    background-color: #66e26a;
-    font-family: 'Actor', sans-serif; /* police pour le menu*/
-    font-size: 34px; /* taille de la police */
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px; /*les arrondis du menu*/
-}
-
-#section
-{
-}
-
-.petite-image {
-    display: inline-block;
-    width: 30px;
-    height: 35px;
-    margin-right: 5px; /* Ajoute des espace entre les images et le texte */
-}
-
-.logo
-{
-	border: solid 4px #6d9795;
-	width: 115px;
-	height: 118px;
-	border-radius: 20px;
-	margin-right: 45px;
 }
 
 .icone-panier
@@ -153,22 +114,41 @@ p{
 	margin-left: 80px;
 }
 
-.milieu-top{
-	vertical-align: text-top;
+
+/* éléments de style qui s'appliquent sur le menu*/
+
+#nav    /*Contient la barre de navigation. 
+        Utilise flexbox pour centrer le contenu du menu, 
+        avec un fond vert et des coins arrondis. 
+        Définit la structure générale du menu de navigation*/
+{
+	height: 168px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centre le menu horizontalement */
+    align-items: center; /* centre le menu verticalement */
+    background-color: #66e26a;
+    font-family: 'Actor', sans-serif;
+    font-size: 34px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; /*les arrondis du menu*/
 }
 
-.menu {
-    display: flex; /* Utilise flexbox pour le menu */
+.menu {     /*Gère la disposition des éléments de menu en ligne, 
+            avec des espacements égaux (grâce à `flexbox`). */
+    display: flex;
     flex-direction: row;
     justify-content: space-between; /* Fais des espaces égaux entre les éléments */
     align-items: center; 
-    padding: 0; /* Enlève le padding par défaut*/
-    margin: 0; /* Enlève la marge par défaut */
-    list-style: none; /* Enlève les points de liste */
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .menu > li {
-    position: relative; /* Position relative pour position absolue de ul */
+    position: relative;
+    margin: 0 20px;
+    text-align: center;
 }
 
 .menu > li > a {
@@ -177,19 +157,14 @@ p{
 
 .menu > li > ul {
     display: none; /* Cache les liens des sous-menus  */
-    position: absolute; /* Les met en position absolue */
-    background-color: #66e26a; /* Pour que la couleur des sous-menu va avec la couleur du nav */
-    padding: 10px; /* Ajoute du padding */
-    border-radius: 5px; /* Optionel: arrondis des côtés */
+    position: absolute;
+    background-color: #66e26a; /* Pour que la couleur des sous-menu aille avec celle du nav */
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .menu > li:hover > ul {
     display: block; /* Montre les sous-menus quand la souris passe dessus */
-}
-
-.menu li {
-    margin: 0 20px; /* Ajuste la distance entre les éléments du menu*/
-    text-align: center; /* Centre le texte dans chaque élément du menu */
 }
 
 .menu a {
@@ -205,18 +180,132 @@ p{
 }
 
 ul ul li {
-    font-size: 16px; /* Donne une taille de texte plus petite pour les éléments des sous-menus */
-    color: #000; /* Couleur du texte */
+    font-size: 16px;
+    color: #000;
     display: block;
 }
 
-.image-offre
+    /*Première version du menu*/
+
+.logo
 {
-	display: inline-block;
-	width: 195px;
-	height: 195px;
-    border: solid #2f8a28 10px;
-	border-radius: 125px;
+	border: solid 4px #6d9795;
+	width: 115px;
+	height: 118px;
+	border-radius: 20px;
+	margin-right: 45px;
+}
+
+    /*Deuxième version du menu*/
+
+.logo-accueil {
+    border: solid 4px #6d9795;
+    display: block;
+    left: 39%;
+    top: 150px;
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 4;
+}
+
+
+/*éléments de style qui s'appliquent sur le footer*/
+
+footer{
+	display: flex;
+	height: 210px;
+    background-color: #b2f0ff;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#footer
+{ 
+	background-color: #b2f0ff;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.milieu-footer{
+	/*mettre le texte centré avec l'image à la vertical*/
+	vertical-align: top;
+	margin-top: 4px;
+	display:flex;
+	flex-direction: row;
+}
+
+.lesPartiesFooter {
+	display : flex; 
+	flex-direction : column; /* mettre en colonne */
+	justify-content : center; /* centre horrizontalement */
+	margin-block-end: auto; /* positionne en haut du footer */
+	margin-left:50px;
+	margin-right: 100px; /* les marges */
+    margin-top: 10px;
+}
+
+.titresFooter {
+	font-weight: bold; /* metrre en gras */
+	margin-bottom: 18px; /* les marges */
+	
+}
+
+.titresFooter::after { /*Ajoute le trait de décoration sous les titres du footer*/
+    display: block;
+    font-weight: lighter;
+    margin: 0px;
+    content: "___________"; 
+}
+
+.liensFooter {
+	margin-bottom : 15px; /* espace entre les liens */
+	color: #000; /* couleur noire */
+    text-decoration: none; /* sans le soulignage */
+}
+
+
+
+/*Ajoute l'image des taches de vache répétées derrière le contenu du site*/
+
+.section-principale{
+    margin-top: 20px;
+
+    /*Fais l'image répétée en arrière-plan*/
+    background-image: url("Images/taches-vaches.svg");
+    background-clip: border-box;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+
+/*éléments de style des boutons du site*/
+
+.button{
+	background-color: #ffffff;
+	border: solid 2px #618f97;
+	height: 46px;
+	font-family: '"Montserrat", sans-serif', sans-serif;
+	font-size: 18px;
+	border-radius: 50px;
+	padding: 10px;
+    padding-inline: 25px; /* aggrandit la largeur du bouton */
+	margin: 10px;
+}
+
+button:hover{
+	transform: scale(1.1);
+}
+
+
+/*éléments de style qui ne s'appliquent que pour la page des offres de recrutement aka rejoignez-nous*/
+
+#section-offres-recrut{
+    display: flex;
+    flex-direction: column;
 }
 
 .offre-recrutement
@@ -238,6 +327,16 @@ ul ul li {
 
 }
 
+.offre-recrutement > img
+{
+	display: inline-block;
+	width: 195px;
+	height: 195px;
+    border: solid #2f8a28 10px;
+	border-radius: 125px;
+}
+
+
 .style-infos-recrut
 {
     display: flex;
@@ -247,3 +346,107 @@ ul ul li {
     padding-left: 10px;
     padding-right: 50px;
 }
+
+.style-infos-recrut > h2{
+    font-size: 36px;
+}
+
+.style-infos-recrut > p{
+    font-size: 24px;
+}
+
+
+/*éléments de style qui ne s'appliquent que pour la page nos produits*/
+
+.unProduit {
+	width: 250px; /*largeur*/
+    height: 332px; /*hauteur*/
+	display:inline-block; /*mettre en ligne*/
+	background-color:#b2f0ff; /* couleur de fond = bleu */
+	border: solid black 1px; /* bordure noire */
+	border-radius: 25px; /* bordure arrondie sur les bords */
+	padding: 25px; /* marge interne */
+	margin-left: 100px; /* marge gauche */
+	margin-bottom: 60px; /* marge en bas */
+}
+
+.imageProduit {
+	padding-bottom: 9.5px; 
+	padding-top: 9.5px;
+	padding-left: 32.5px;
+	padding-right: 32.5px; /* pour que l'image soit bien centrée dans son espace */
+    width: 201px; /*largeur*/
+    height: 155px; /*hauteur*/
+	border: solid black 1px; /* bordure noire */
+	border-radius: 25px; /* bordure arrondie sur les bords */
+	background-color:white; /* fond blanc */
+}
+
+.prix{
+	font-size: 20px; /* taille de la police */
+	margin-left:70px; 
+	margin-right: 50px; 
+	margin-top: 0px;
+	margin-bottom: 0px; /* les marges */
+}
+	
+	
+.imageProduitPanier {
+    width: 53px;
+    height: 53px; /* dimension de l'image */
+    margin-right: 5px; 
+	margin-left : 10px; /* les marges */
+	vertical-align: middle; /* aligné verticalement avec le bouton */
+}
+
+.texte-centre{
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+/* Partie de la page d'accueil */
+
+.image-vaches {
+	display: block;
+	width: 100%;
+	height: 680px;
+	position: relative;
+	z-index: 2;	
+}
+
+#presentation {
+	display: flex ;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+}
+
+#presentation > h1 {
+	font-size: 62px;
+	font-family: 'Agbalumo', system-ui;
+}
+
+#presentation > p {
+	font-size: 24px;
+	font-family: '"Montserrat", sans-serif', sans-serif;
+}
+
+#presentation > div {
+	flex-direction: row;
+}
+
+.image-bouteilles-de-lait {
+	width: 943px;
+	height: 428px;
+	border-radius: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.image-fin-accueil{
+	width: 573px;
+	height: 460px;
+	border-radius: 25px;
+	margin-top: 20px;
+}
+
